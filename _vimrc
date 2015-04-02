@@ -27,8 +27,8 @@ map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
-map <Leader>n <ESC>:tabp<CR>
-map <Leader>m <ESC>:tabN<CR>
+map <Leader>[ <ESC>:tabp<CR>
+map <Leader>] <ESC>:tabN<CR>
 
 
 " bind CTRL+<movement> keys to move around windows, instead of usin CTRL+w+<movement>
@@ -165,14 +165,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Settings for easymotion
 " git clone https://github.com/Lokaltog/vim-easymotion
-"" let g:EasyMotion_startofline=0  "keep cursor colum when JK motion
-map , <Plug>(easymotion-prefix)
-let g:EasyMotion_smartcase=1
-let g:EasyMotion_use_smartsign_us=1 " US layout
-map ,/ <Plug>(easymotion-sn)
-omap ,/ <Plug>(easymotion-tn)
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
-"" map n <Plug>(easymotion-next)
-"" map N <Plug>(easymotion-prev)
+let g:EasyMotion_disable_two_key_combo=1
+let g:EasyMotion_enter_jump_first=1 
+map <Leader> <Plug>(easymotion-prefix)
