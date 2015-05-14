@@ -67,11 +67,8 @@ set undolevels=700
 
 
 " Real programmers don't use TABs but spaces
-set expandtab
-set shiftround
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType html,xml,json,javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
 set ai  " Auto indent
 set si  " Smart ident
@@ -168,3 +165,11 @@ let g:UltiSnipsEditSplit="vertical"
 let g:EasyMotion_disable_two_key_combo=1
 let g:EasyMotion_enter_jump_first=1 
 map <Leader> <Plug>(easymotion-prefix)
+
+" Settings for Autoformat
+" git clone https://github.com/Chiel92/vim-autoformat.git
+"
+" MacOS
+" brew install astyle
+" sudo npm install -g js-beautify
+"  
