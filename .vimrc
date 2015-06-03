@@ -1,15 +1,13 @@
 " Sample vimrc file by Kevin Zou
 
-
-set enc=utf-8
-set fenc=utf-8
-
+set enc  =utf-8
+set fenc =utf-8
 
 " Rebind <Leader> key
 " I like to have it here because it is easier to reach than the default and
 " it it next to ``m`` and ``n`` which I use for navigating between tabs.
-let mapleader=","
-let g:mapleader=","
+let mapleader   = ","
+let g:mapleader = ","
 
 
 " Bind nohl
@@ -18,8 +16,8 @@ map <silent><leader><space> :noh<cr>
 
 
 " Quick quit command
-nmap <Leader>e :q<CR> " Quit current window
-nmap <Leader>E :qa!<CR>  " Quit all windows
+nmap <Leader>e :q<CR>   " Quit current window
+nmap <Leader>E :qa!<CR> " Quit all windows
 
 
 " Useful mappings for managing tabs
@@ -53,10 +51,10 @@ syntax on
 
 
 " Showing line numbers and length
-set nu     " show line numbers
-set cursorline  " highlight current line
-set tw=100 " width of document (used by gd)
-set fo-=t  " don't automatically wrap text when typing
+set nu         " show line numbers
+set cursorline " highlight current line
+set tw=100     " width of document (used by gd)
+set fo-=t      " don't automatically wrap text when typing
 set colorcolumn=101
 highlight colorcoloumn ctermbg=Gray guibg=Gray
 
@@ -70,9 +68,10 @@ set undolevels=700
 set expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd FileType html,xml,json,javascript setlocal shiftwidth=2 softtabstop=2 tabstop=2
 
-set ai  " Auto indent
-set si  " Smart ident
-set wrap    " Wrap lines
+set ai        " Auto indent
+set si        " Smart ident
+set wrap      " Wrap lines
+"set autochdir " Auto change directory
 
 " Make search case insensitive
 set hlsearch
@@ -90,9 +89,9 @@ set noswapfile
 
 
 " Settings for netrw
-let g:netrw_liststyle=3
-let g:netrw_preview=1
-let g:netrw_winsize=25
+let g:netrw_liststyle = 3
+let g:netrw_preview   = 1
+let g:netrw_winsize   = 25
 
 
 " Setup Pathogen to manage you plugins
@@ -156,14 +155,14 @@ imap <silent><C-k> <C-r>=OmniPopup('k')<CR>
 
 
 " Settings for UltiSnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsEditSplit     = "vertical"
 
 
 " Settings for easymotion
 " git clone https://github.com/Lokaltog/vim-easymotion
-let g:EasyMotion_disable_two_key_combo=1
-let g:EasyMotion_enter_jump_first=1 
+let g:EasyMotion_disable_two_key_combo = 1
+let g:EasyMotion_enter_jump_first      = 1
 map <Leader> <Plug>(easymotion-prefix)
 
 " Settings for Autoformat
